@@ -1,8 +1,8 @@
 // Class for each on screen tile, which are either a mine or a clue
 
+enum Tile_State { Hidden, Revealed, Flaged };
+
 class Tile {
 public:
-	int clue; // -1 for mine, otherwise is the number of mines in the surrounding 8 tiles
-
-
+	Tile_State state;
 };

@@ -3,6 +3,7 @@
 #define MinefieldSize 10
 
 class Minefield {
+
 private:
 	Tile field[MinefieldSize][MinefieldSize];
 	void generate_field(); // starts a new game

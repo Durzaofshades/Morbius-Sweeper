@@ -24,6 +24,12 @@
     <ClInclude Include="Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mine_Tile.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Clue_Tile.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
