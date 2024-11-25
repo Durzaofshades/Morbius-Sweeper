@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Sprites">
+      <UniqueIdentifier>{37004dcc-03cd-4ea9-aa43-48cd92f93442}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.hpp">
@@ -29,5 +32,37 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Morbius-Sweeper-Pictures\flag.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_eight.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_five.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_four.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_one.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_seven.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_six.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_three.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_two.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\tile_hidden.jpg">
+      <Filter>Resource Files\Sprites</Filter>
+    </Image>
   </ItemGroup>
 </Project>
