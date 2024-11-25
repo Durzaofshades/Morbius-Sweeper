@@ -12,7 +12,8 @@ void Minefield::generate_field() {
 
 	for (int x_index = 0; x_index < MinefieldSize; x_index++) {
 		for (int y_index = 0; y_index < MinefieldSize; y_index++) {
-			// generate each tile
+			// loop over every tile
+			// if tile is not a mine, create a new clue tile
 		}
 	}
 }

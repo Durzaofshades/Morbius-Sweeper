@@ -22,4 +22,5 @@ public:
 
 	void reveal(int x, int y); // trigger a tile
 	void flag(int x, int y); // place a flag on a tile
+
 };
