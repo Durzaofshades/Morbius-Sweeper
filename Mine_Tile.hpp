@@ -2,5 +2,5 @@
 
 class Mine_Tile : Tile {
 public:
-	Mine_Tile();
+	Mine_Tile() : Tile() {};
 };

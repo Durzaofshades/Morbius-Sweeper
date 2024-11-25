@@ -13,6 +13,9 @@ class Minefield {
 private:
 	Tile* field[MinefieldSize][MinefieldSize];
 	void generate_field(); // starts a new game
+
+	void lose_game();
+	void win_game();
 	void end_game();
 
 public:
