@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Clue_Tile.hpp" />
+    <ClInclude Include="src\Header.hpp" />
+    <ClInclude Include="src\Math.hpp" />
+    <ClInclude Include="src\Minefield.hpp" />
+    <ClInclude Include="src\Mine_Tile.hpp" />
+    <ClInclude Include="src\Tile.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Clue_Tile.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Math.cpp" />
+    <ClCompile Include="src\Minefield.cpp" />
+    <ClCompile Include="src\Mine_Tile.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -129,21 +144,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Clue_Tile.hpp" />
-    <ClInclude Include="Header.hpp" />
-    <ClInclude Include="Math.hpp" />
-    <ClInclude Include="Minefield.hpp" />
-    <ClInclude Include="Mine_Tile.hpp" />
-    <ClInclude Include="Tile.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Clue_Tile.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Math.cpp" />
-    <ClCompile Include="Minefield.cpp" />
-    <ClCompile Include="Mine_Tile.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
