@@ -25,6 +25,7 @@
     <ClInclude Include="src\Minefield.hpp" />
     <ClInclude Include="src\Mine_Tile.hpp" />
     <ClInclude Include="src\Tile.hpp" />
+    <ClInclude Include="Tile_test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Clue_Tile.cpp" />
