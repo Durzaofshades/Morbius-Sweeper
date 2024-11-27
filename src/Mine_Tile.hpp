@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Tile.hpp"
 
 class Mine_Tile : public Tile {
