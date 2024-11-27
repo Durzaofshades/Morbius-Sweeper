@@ -4,7 +4,7 @@
 #include "Tile.hpp"
 #include "Math.hpp"
 
-class Clue_Tile : Tile {
+class Clue_Tile : public Tile {
 
 public:
 	Clue_Tile(Tile* field[Minefield_X][Minefield_Y], int X, int Y) : Tile() {
