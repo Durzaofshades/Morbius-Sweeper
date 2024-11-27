@@ -21,7 +21,7 @@ void Minefield::generate_field() {
 
 Minefield::Minefield() {
 	this->generate_field();
-	this->mine_count = 0;
+	this->mine_count = 0; // every time a mine is flagged successfuly, decrement
 }
 
 void Minefield::reveal(int x, int y) {
@@ -32,22 +32,18 @@ void Minefield::reveal(int x, int y) {
 		return;
 	}
 
-	// check if tile is a mine
-	if (current_Tile->type == Mine) {
-		current_Tile->reveal();
-		this->lose_game();
-		return;
+	if (current_Tile->reveal() == -1) {
+		// -1 means end game
+		this->end_game();
 	}
 
-	// if tile is a clue
-	if (current_Tile->type == Clue) {
-		current_Tile->reveal();
+	if (current_Tile->flag() == -1) {
+		this->end_game();
 	}
-
 
 }
 
 void Minefield::flag(int x, int y) {
 	Tile* current_Tile = this->field[x][y];
-
+	current_Tile->flag();
 }

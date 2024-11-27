@@ -132,12 +132,15 @@
   <ItemGroup>
     <ClInclude Include="Clue_Tile.hpp" />
     <ClInclude Include="Header.hpp" />
+    <ClInclude Include="Math.hpp" />
     <ClInclude Include="Minefield.hpp" />
     <ClInclude Include="Mine_Tile.hpp" />
     <ClInclude Include="Tile.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Clue_Tile.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="Minefield.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

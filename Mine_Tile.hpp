@@ -2,5 +2,6 @@
 
 class Mine_Tile : Tile {
 public:
-	Mine_Tile() : Tile() {};
+	int reveal();
+	int flag();
 };

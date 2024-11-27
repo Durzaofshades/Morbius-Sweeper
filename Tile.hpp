@@ -3,14 +3,14 @@
 enum Tile_State { Hidden, Revealed, Flaged };
 enum Tile_Type {Clue, Mine};
 
-class Tile {
-	
-	friend class Minefield;
+class Tile { // abstract class
 
 public:
-	Tile_State state;
-	Tile_Type type;
+	virtual int reveal() = 0; // returns a -1 on loss
+	virtual int flag() = 0; // returns -1 on loss
 
-private:
-	void reveal();
+	virtual int is_Mine();
+
+protected:
+	Tile_State state;
 };
