@@ -38,9 +38,11 @@ void Minefield::reveal(int x, int y) {
 		this->end_game();
 	}
 
+	/*
 	if (current_Tile->flag() == -1) {
 		this->end_game();
 	}
+	*/
 
 }
 

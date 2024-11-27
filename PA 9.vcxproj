@@ -33,6 +33,7 @@
     <ClCompile Include="src\Math.cpp" />
     <ClCompile Include="src\Minefield.cpp" />
     <ClCompile Include="src\Mine_Tile.cpp" />
+    <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

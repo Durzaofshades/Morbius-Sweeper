@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Header.hpp"
 #include "Tile.hpp"
+#include "Header.hpp"
 #include "Math.hpp"
 
-class Clue_Tile : Tile {
+class Clue_Tile : public Tile {
 
 public:
 	Clue_Tile(Tile* field[Minefield_X][Minefield_Y], int X, int Y) : Tile() {
@@ -17,6 +17,5 @@ public:
 
 private:
 	int Mine_Number;
-	
 	int calculate_clue(Tile* field[Minefield_X][Minefield_Y], int X, int Y);
 };
