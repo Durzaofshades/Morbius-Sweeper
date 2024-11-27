@@ -5,7 +5,7 @@
 #include "Clue_Tile.hpp"
 #include "Header.hpp"
 
-#include <stdlib.h>
+#include <cstdlib>
 #include <time.h>
 
 class Minefield {
