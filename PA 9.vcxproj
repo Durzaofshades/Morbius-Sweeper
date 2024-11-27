@@ -35,6 +35,18 @@
     <ClCompile Include="src\Mine_Tile.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Morbius-Sweeper-Pictures\flag.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_eight.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_five.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_four.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_one.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_seven.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_six.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_three.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\num_mines_two.jpg" />
+    <Image Include="..\Morbius-Sweeper-Pictures\tile_hidden.jpg" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
