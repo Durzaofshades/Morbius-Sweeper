@@ -13,9 +13,10 @@ public:
 
 	int flag(); // this is not a mine, lose the game
 	int reveal(); // this is a clue
+	int is_mine();
 
 private:
 	int Mine_Number;
-
+	
 	int calculate_clue(Tile* field[Minefield_X][Minefield_Y], int X, int Y);
 };

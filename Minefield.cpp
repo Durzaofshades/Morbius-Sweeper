@@ -11,8 +11,8 @@ void Minefield::generate_field() {
 		 this->field[x][y] = dynamic_cast <Tile*> (new Mine_Tile());
 	}
 
-	for (int x_index = 0; x_index < MinefieldSize; x_index++) {
-		for (int y_index = 0; y_index < MinefieldSize; y_index++) {
+	for (int x_index = 0; x_index < Minefield_X; x_index++) {
+		for (int y_index = 0; y_index < Minefield_Y; y_index++) {
 			// loop over every tile
 			// if tile is not a mine, create a new clue tile
 		}

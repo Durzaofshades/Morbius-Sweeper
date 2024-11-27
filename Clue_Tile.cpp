@@ -8,6 +8,8 @@ int Clue_Tile::reveal() {
 	return 0; 
 }
 
+int Clue_Tile::is_mine() { return 0; }
+
 int Clue_Tile::calculate_clue(Tile* field[Minefield_X][Minefield_Y], int X, int Y) {
 
 	int xLeft = max(0, (X - 1)); // x loop starts at this number
@@ -26,6 +28,8 @@ int Clue_Tile::calculate_clue(Tile* field[Minefield_X][Minefield_Y], int X, int 
 			}
 		}
 	}
+	
+	this->Mine_Number = mines;
 
-	return 0;
+	return mines;
 }
