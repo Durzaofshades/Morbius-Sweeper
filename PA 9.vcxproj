@@ -19,15 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="appWrapper.hpp" />
+    <ClInclude Include="hidden_Tile.hpp" />
     <ClInclude Include="src\Clue_Tile.hpp" />
     <ClInclude Include="src\Header.hpp" />
     <ClInclude Include="src\Math.hpp" />
     <ClInclude Include="src\Minefield.hpp" />
     <ClInclude Include="src\Mine_Tile.hpp" />
     <ClInclude Include="src\Tile.hpp" />
-    <ClInclude Include="Tile_test.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="appWrapper.cpp" />
+    <ClCompile Include="hidden_Tile.cpp" />
     <ClCompile Include="src\Clue_Tile.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Math.cpp" />

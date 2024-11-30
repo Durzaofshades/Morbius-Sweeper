@@ -36,7 +36,10 @@
     <ClInclude Include="src\Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tile_test.hpp">
+    <ClInclude Include="appWrapper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hidden_Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,5 +62,43 @@
     <ClCompile Include="src\Tile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="appWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hidden_Tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\flag.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_eight.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_five.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_four.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_one.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_seven.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_six.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_three.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\num_mines_two.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\tile_hidden.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
