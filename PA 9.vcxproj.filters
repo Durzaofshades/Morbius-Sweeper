@@ -36,10 +36,10 @@
     <ClInclude Include="src\Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="appWrapper.hpp">
+    <ClInclude Include="src\appWrapper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hidden_Tile.hpp">
+    <ClInclude Include="src\hidden_Tile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,10 +62,10 @@
     <ClCompile Include="src\Tile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="appWrapper.cpp">
+    <ClCompile Include="src\appWrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hidden_Tile.cpp">
+    <ClCompile Include="src\hidden_Tile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

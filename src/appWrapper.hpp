@@ -8,6 +8,7 @@
 #include "Tile.hpp"
 #include "hidden_Tile.hpp"
 
-void make_box(sf::RenderWindow& window);
 
+//void make_box(sf::RenderWindow& window);
+//void draw_tile(sf::RenderWindow& window, Tile* tile);
 void app_wrapper();

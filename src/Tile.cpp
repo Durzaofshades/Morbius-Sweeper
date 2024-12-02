@@ -1,12 +1,14 @@
 #include "Tile.hpp"
 
 Tile::Tile(float x, float y) {
-	sf::RectangleShape tile(sf::Vector2f(60.f, 60.f));
-	this->m_hidden_Tile = tile;
-	this->m_hidden_Tile.setOutlineColor(sf::Color::White);
-	this->m_hidden_Tile.setOutlineThickness(1);
-	this->m_hidden_Tile.setFillColor(sf::Color::Transparent);
-	this->m_hidden_Tile.setPosition(x, y);
+	sf::RectangleShape tile_rectangle(sf::Vector2f(60.f, 60.f));
+
+	this->graphics = tile_rectangle;
+	this->graphics.setOutlineColor(sf::Color::White);
+	this->graphics.setOutlineThickness(1);
+	this->graphics.setFillColor(sf::Color::Transparent);
+	this->graphics.setPosition(x, y);
+	
 	/*this->m_Texture = getTexture();*/
 	this->state = Hidden;
 }
@@ -18,19 +20,19 @@ int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "
 	return 0;
 }
 
-void Tile::display(sf::RenderWindow& window) {
-	window.draw(this->m_hidden_Tile);
+void Tile::draw(sf::RenderWindow& window) {
+	window.draw(this->graphics);
 }
 
 float Tile::getPositionX() {
 	float x = 0;
-	x = m_hidden_Tile.getPosition().x;
+	x = graphics.getPosition().x;
 	return x;
 }
 
 float Tile::getPositionY() {
 	float y = 0;
-	y = m_hidden_Tile.getPosition().y;
+	y = graphics.getPosition().y;
 	return y;
 }
 

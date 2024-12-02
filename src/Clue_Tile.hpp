@@ -7,7 +7,7 @@
 class Clue_Tile : public Tile {
 
 public:
-	Clue_Tile(Tile* field[Minefield_X][Minefield_Y], int X, int Y) : Tile() {
+	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y) : Tile(X, Y) {
 		this->calculate_clue(field, X, Y);
 	}
 
@@ -17,5 +17,5 @@ public:
 
 private:
 	int Mine_Number;
-	int calculate_clue(Tile* field[Minefield_X][Minefield_Y], int X, int Y);
+	int calculate_clue(Tile* field[Minefield_Width][Minefield_Height], int X, int Y);
 };

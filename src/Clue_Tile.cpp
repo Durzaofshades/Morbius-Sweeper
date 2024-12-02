@@ -1,3 +1,4 @@
+#include "Clue_Tile.hpp"
 //#include "Clue_Tile.hpp"
 //
 //int Clue_Tile::flag() { return -1; }
@@ -33,3 +34,22 @@
 //
 //	return mines;
 //}
+
+int Clue_Tile::flag() {
+    return 0;
+}
+
+int Clue_Tile::reveal()
+{
+    return 0;
+}
+
+int Clue_Tile::is_mine()
+{
+    return 0;
+}
+
+int Clue_Tile::calculate_clue(Tile* field[Minefield_Width][Minefield_Height], int X, int Y) {
+
+    return 0;
+}

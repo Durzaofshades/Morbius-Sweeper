@@ -6,8 +6,6 @@ enum Tile_Type { Clue, Mine };
 
 class Tile { // abstract class
 public:
-	
-
 	float getPositionX();
 	float getPositionY();
 
@@ -20,15 +18,15 @@ public:
 
 	Tile_State state;
 
-	virtual int reveal() = 0; // returns a -1 on loss
-	virtual int flag() = 0; // returns -1 on loss
+	virtual int reveal(); // returns a -1 on loss
+	virtual int flag(); // returns -1 on loss
 	virtual int is_Mine();
 
-	sf::RectangleShape m_hidden_Tile;
+	void draw(sf::RenderWindow& window);
+
+	sf::RectangleShape graphics;
 
 private:
-
 	sf::Texture m_Texture;
-	void display(sf::RenderWindow& window);
 };
 
