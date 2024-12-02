@@ -6,10 +6,7 @@ enum Tile_Type { Clue, Mine };
 
 class Tile { // abstract class
 public:
-	void setOutlineColor();
-	void setOutlineThickness();
-	void setFillColor();
-	void setPosition(float x, float y);
+	
 
 	float getPositionX();
 	float getPositionY();
@@ -18,7 +15,7 @@ public:
 
 	sf::Texture getTexture() const;
 
-	Tile();
+	Tile(float x, float y);
 	~Tile();
 
 	Tile_State state;
@@ -27,11 +24,10 @@ public:
 	virtual int flag() = 0; // returns -1 on loss
 	virtual int is_Mine();
 
-
+	sf::RectangleShape m_hidden_Tile;
 
 private:
 
-	sf::RectangleShape m_hidden_Tile;
 	sf::Texture m_Texture;
 	void display(sf::RenderWindow& window);
 };

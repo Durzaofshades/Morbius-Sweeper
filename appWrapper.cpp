@@ -5,8 +5,8 @@ void make_box(sf::RenderWindow& window) {
 	char name = 1;
 	for (int i = 0; i < 15; i++) {
 		for (int j = 0; j < 15; j++) {
-			hidden_Tile* name = (hidden_Tile*) new hidden_Tile(start_x, start_y);
-			window.draw(name->tile_hidden);
+			Tile* name = (Tile*) new hidden_Tile(start_x, start_y);
+			window.draw(name->m_hidden_Tile);
 			start_x = start_x + 60;
 			name++;
 		}
