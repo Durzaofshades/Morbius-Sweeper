@@ -22,7 +22,6 @@
     <ClInclude Include="src\appWrapper.hpp" />
     <ClInclude Include="src\Clue_Tile.hpp" />
     <ClInclude Include="src\Header.hpp" />
-    <ClInclude Include="src\hidden_Tile.hpp" />
     <ClInclude Include="src\Math.hpp" />
     <ClInclude Include="src\Minefield.hpp" />
     <ClInclude Include="src\Mine_Tile.hpp" />
@@ -31,7 +30,6 @@
   <ItemGroup>
     <ClCompile Include="src\appWrapper.cpp" />
     <ClCompile Include="src\Clue_Tile.cpp" />
-    <ClCompile Include="src\hidden_Tile.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Math.cpp" />
     <ClCompile Include="src\Minefield.cpp" />
@@ -40,14 +38,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\flag.jpg" />
-    <Image Include="resources\num_mines_eight.jpg" />
-    <Image Include="resources\num_mines_five.jpg" />
-    <Image Include="resources\num_mines_four.jpg" />
-    <Image Include="resources\num_mines_one.jpg" />
-    <Image Include="resources\num_mines_seven.jpg" />
-    <Image Include="resources\num_mines_six.jpg" />
-    <Image Include="resources\num_mines_three.jpg" />
-    <Image Include="resources\num_mines_two.jpg" />
+    <Image Include="resources\num_mines_8.jpg" />
+    <Image Include="resources\num_mines_5.jpg" />
+    <Image Include="resources\num_mines_4.jpg" />
+    <Image Include="resources\num_mines_1.jpg" />
+    <Image Include="resources\num_mines_7.jpg" />
+    <Image Include="resources\num_mines_6.jpg" />
+    <Image Include="resources\num_mines_3.jpg" />
+    <Image Include="resources\num_mines_2.jpg" />
     <Image Include="resources\tile_hidden.jpg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
