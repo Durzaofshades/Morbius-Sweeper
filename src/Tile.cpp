@@ -15,6 +15,16 @@ Tile::Tile(float x, float y) {
 
 Tile::~Tile() {}
 
+int Tile::reveal()
+{
+	return 0;
+}
+
+int Tile::flag()
+{
+	return 0;
+}
+
 int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "crashes out" if I do that
 {
 	return 0;

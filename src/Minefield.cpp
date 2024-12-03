@@ -4,13 +4,22 @@ void Minefield::generate_field() {
 	int x_index, y_index;
 	float x_pos, y_pos;
 
+	// instantiate each tile
+	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
+		for (int y_index = 0; y_index < Minefield_Height; y_index++) {
+			// loop over every tile
+			// if tile is not a mine, create a new clue tile
+			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
+			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
+
+			this->field[x_index][y_index] = (Tile*)(new Tile(x_pos, y_pos));
+		}
+	}
+
 	for (int mine_count = 0; mine_count < MineNumber; mine_count++) {
 		x_index = rand() % 15;
 		y_index = rand() % 15;
 		
-		// offset is 60
-		// tile width is 60
-
 		x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 		y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
