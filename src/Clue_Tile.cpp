@@ -4,6 +4,11 @@ int Clue_Tile::flag() { return -1; }
 
 int Clue_Tile::reveal() { 
 	// TODO GRAPHICS
+	// 
+	// change texture to str_cat("num_mines" + (char)(this.mines)
+	// 
+	// 
+	// since this isn't a mine, we return 0
 	return 0; 
 }
 

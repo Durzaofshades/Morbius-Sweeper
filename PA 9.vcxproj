@@ -38,14 +38,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\flag.jpg" />
-    <Image Include="resources\num_mines_eight.jpg" />
-    <Image Include="resources\num_mines_five.jpg" />
-    <Image Include="resources\num_mines_four.jpg" />
-    <Image Include="resources\num_mines_one.jpg" />
-    <Image Include="resources\num_mines_seven.jpg" />
-    <Image Include="resources\num_mines_six.jpg" />
-    <Image Include="resources\num_mines_three.jpg" />
-    <Image Include="resources\num_mines_two.jpg" />
+    <Image Include="resources\num_mines_8.jpg" />
+    <Image Include="resources\num_mines_5.jpg" />
+    <Image Include="resources\num_mines_4.jpg" />
+    <Image Include="resources\num_mines_1.jpg" />
+    <Image Include="resources\num_mines_7.jpg" />
+    <Image Include="resources\num_mines_6.jpg" />
+    <Image Include="resources\num_mines_3.jpg" />
+    <Image Include="resources\num_mines_2.jpg" />
     <Image Include="resources\tile_hidden.jpg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
