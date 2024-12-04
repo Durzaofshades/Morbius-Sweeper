@@ -37,6 +37,7 @@
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\Morbius-Sweeper-Pictures\tile_hidden.png" />
     <Image Include="resources\flag.jpg" />
     <Image Include="resources\num_mines_8.jpg" />
     <Image Include="resources\num_mines_5.jpg" />

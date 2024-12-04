@@ -1,15 +1,17 @@
 #include "Tile.hpp"
 
-Tile::Tile(float x, float y) {
+Tile::Tile(float x, float y, sf::Texture new_Texture) {
 	sf::RectangleShape tile_rectangle(sf::Vector2f(60.f, 60.f));
-
+	Texture = new_Texture;
+	this->m_Sprite.setTexture(Texture);
+	this->m_Sprite.setScale(.12, .12);
+	this->m_Sprite.setPosition(x, y);
 	this->graphics = tile_rectangle;
 	this->graphics.setOutlineColor(sf::Color::White);
 	this->graphics.setOutlineThickness(1);
-	this->graphics.setFillColor(sf::Color::Transparent);
+	
 	this->graphics.setPosition(x, y);
 	
-	/*this->m_Texture = getTexture();*/
 	this->state = Hidden;
 }
 
@@ -32,26 +34,13 @@ int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "
 
 void Tile::draw(sf::RenderWindow& window) {
 	window.draw(this->graphics);
+	window.draw(this->m_Sprite);
 }
 
 float Tile::getPositionX() {
-	float x = 0;
-	x = graphics.getPosition().x;
-	return x;
+	return graphics.getPosition().x;
 }
 
 float Tile::getPositionY() {
-	float y = 0;
-	y = graphics.getPosition().y;
-	return y;
+	return graphics.getPosition().y;
 }
-
-void Tile::setTexture(sf::Texture new_texture) {
-	//this->m_Texture = new_texture;
-}
-
-sf::Texture Tile::getTexture() const
-{
-	return this->m_Texture;
-}
-

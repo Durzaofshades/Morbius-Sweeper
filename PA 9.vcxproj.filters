@@ -94,5 +94,8 @@
     <Image Include="resources\tile_hidden.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\Morbius-Sweeper-Pictures\tile_hidden.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

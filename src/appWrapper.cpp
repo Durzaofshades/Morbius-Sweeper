@@ -3,7 +3,7 @@
 void app_wrapper() {
 	// Minefield_Width;
 	// Minefield_Height;
-
+	
 	// instantiate minefield
 	Minefield minefield;
 
@@ -15,6 +15,7 @@ void app_wrapper() {
 
 		// check for event
 		while (window.pollEvent(event)) {
+			
 			if (event.type == sf::Event::Closed) {
 				window.close();
 			}
