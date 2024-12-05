@@ -31,8 +31,8 @@ int Clue_Tile::calculate_clue(Tile* field[Minefield_Width][Minefield_Height], in
 			}
 		}
 	}
-	
+
 	this->Mine_Number = mines;
 
-	return mines
+	return mines;
 }
