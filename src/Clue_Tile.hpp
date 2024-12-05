@@ -7,12 +7,12 @@
 class Clue_Tile : public Tile {
 
 public:
-	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y) : Tile(X, Y) {
+	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y, sf::Texture new_Texture) : Tile(X, Y, new_Texture) {
 		this->calculate_clue(field, X, Y);
 	}
 
 	int flag(); // this is not a mine, lose the game
-	int reveal(); // this is a clue
+	int reveal(int x, int y, int mines); // this is a clue
 	int is_mine();
 
 private:

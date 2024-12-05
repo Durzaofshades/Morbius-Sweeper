@@ -9,11 +9,8 @@ public:
 	float getPositionX();
 	float getPositionY();
 
-	void setTexture(sf::Texture new_texture);
 
-	sf::Texture getTexture() const;
-
-	Tile(float x, float y);
+	Tile(float x, float y, sf::Texture new_Texture);
 	~Tile();
 
 	Tile_State state;
@@ -25,8 +22,9 @@ public:
 	void draw(sf::RenderWindow& window);
 
 	sf::RectangleShape graphics;
-
+	sf::Sprite m_Sprite;
+	sf::Texture Texture;
 private:
-	sf::Texture m_Texture;
+	
 };
 

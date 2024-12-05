@@ -1,13 +1,15 @@
 #include "Clue_Tile.hpp"
 
+#define _CRT_SECURE_NO_WARNINGS
+
 int Clue_Tile::flag() { return -1; }
 
-int Clue_Tile::reveal() { 
+int Clue_Tile::reveal(int x, int y, int mines) {
 	// TODO GRAPHICS
-	// 
-	// change texture to str_cat("num_mines" + (char)(this.mines)
-	// 
-	// 
+	std::string file_name = "num_mines_";
+	
+	this->Texture.loadFromFile(file_name);
+	 
 	// since this isn't a mine, we return 0
 	return 0; 
 }

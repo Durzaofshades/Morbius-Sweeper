@@ -8,6 +8,8 @@
 
 #include "SFML\Graphics.hpp"
 
+#define _CRT_SECURE_NO_WARNINGS
+
 
 	// Constants
 // there are 225 tiles in total
@@ -19,5 +21,4 @@
 #define TILE_LENGTH 60 // the width & length of a tile
 #define X_OFFSET 420 // The First Tiles X Value
 #define Y_OFFSET 60 // The First Tiles Y Value
-
 

@@ -4,6 +4,27 @@ void Minefield::generate_field() {
 	int x_index, y_index;
 	float x_pos, y_pos;
 
+	sf::Texture tile_hidden;
+	tile_hidden.loadFromFile("resources/tile_hidden.jpg");
+	sf::Texture tile_m1;
+	tile_m1.loadFromFile("resources/num_mines_1.jpg");
+	sf::Texture tile_m2;
+	tile_m2.loadFromFile("resources/num_mines_2.jpg");
+	sf::Texture tile_m3;
+	tile_m3.loadFromFile("resources/num_mines_3.jpg");
+	sf::Texture tile_m4;
+	tile_m4.loadFromFile("resources/num_mines_4.jpg");
+	sf::Texture tile_m5;
+	tile_m5.loadFromFile("resources/num_mines_5.jpg");
+	sf::Texture tile_m6;
+	tile_m6.loadFromFile("resources/num_mines_6.jpg");
+	sf::Texture tile_m7;
+	tile_m7.loadFromFile("resources/num_mines_7.jpg");
+	sf::Texture tile_m8;
+	tile_m8.loadFromFile("resources/num_mines_8.jpg");
+	sf::Texture tile_flag;
+	tile_flag.loadFromFile("resources/flag.jpg");
+
 	// instantiate each tile
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
 		for (int y_index = 0; y_index < Minefield_Height; y_index++) {
@@ -12,7 +33,7 @@ void Minefield::generate_field() {
 			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			this->field[x_index][y_index] = (Tile*)(new Tile(x_pos, y_pos));
+			this->field[x_index][y_index] = (Tile*)(new Tile(x_pos, y_pos, tile_hidden));
 		}
 	}
 
@@ -23,7 +44,7 @@ void Minefield::generate_field() {
 		x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 		y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos);
+		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos, tile_hidden);
 	}
 
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
@@ -35,7 +56,7 @@ void Minefield::generate_field() {
 
 			if (!this->field[x_index][y_index]->is_Mine()) {
 				// if the current mine index is NOT a mine:
-				this->field[x_index][y_index] = (Tile*)(new Clue_Tile(this->field, x_pos, y_pos));
+				this->field[x_index][y_index] = (Tile*)(new Clue_Tile(this->field, x_pos, y_pos, tile_hidden));
 			}
 		}
 	}
