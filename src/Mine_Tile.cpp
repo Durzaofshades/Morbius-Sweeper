@@ -12,10 +12,9 @@ int Mine_Tile::reveal()
 
 int Mine_Tile::flag()
 {
-
-	//sf::Texture* flag;
-	//flag = (sf::Texture*) fopen("flag.jpg", "r");
-	//if flag mine, lose_game();
+	sf::Texture tile_flag;
+	tile_flag.loadFromFile("resources/flag.jpg");
+	this->m_Sprite.setTexture(tile_flag);
 	return 0;
 }
 
