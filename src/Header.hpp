@@ -22,3 +22,7 @@
 #define X_OFFSET 420 // The First Tiles X Value
 #define Y_OFFSET 60 // The First Tiles Y Value
 
+// for window
+#define Window_Width 1920
+#define Window_Height 1080
+

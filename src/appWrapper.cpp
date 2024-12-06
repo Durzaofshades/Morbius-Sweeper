@@ -5,15 +5,15 @@ void app_wrapper() {
 	Minefield minefield;
 
 	// open window
-	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Morbius Sweeper");
+	sf::RenderWindow window(sf::VideoMode(Window_Width, Window_Height), "Morbius Sweeper");
 
 	while (window.isOpen()) {
 		sf::Event event;
 
 		while (window.pollEvent(event)) { // check for event
 			if (event.type == sf::Event::Closed) window.close();
-			if (event.type == sf::Mouse::Left) minefield.reveal(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y);
-			if (event.type == sf::Mouse::Right) minefield.flag(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y);
+			if (event.type == sf::Mouse::Left) minefield.reveal(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
+			if (event.type == sf::Mouse::Right) minefield.flag(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
 		}
 
 		// update window
