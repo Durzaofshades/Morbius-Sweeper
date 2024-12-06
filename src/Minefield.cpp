@@ -5,25 +5,26 @@ void Minefield::generate_field() {
 	float x_pos, y_pos;
 
 	sf::Texture tile_hidden;
-	tile_hidden.loadFromFile("resources/tile_hidden.jpg");
-	sf::Texture tile_m1;
-	tile_m1.loadFromFile("resources/num_mines_1.jpg");
-	sf::Texture tile_m2;
-	tile_m2.loadFromFile("resources/num_mines_2.jpg");
-	sf::Texture tile_m3;
-	tile_m3.loadFromFile("resources/num_mines_3.jpg");
-	sf::Texture tile_m4;
-	tile_m4.loadFromFile("resources/num_mines_4.jpg");
-	sf::Texture tile_m5;
-	tile_m5.loadFromFile("resources/num_mines_5.jpg");
-	sf::Texture tile_m6;
-	tile_m6.loadFromFile("resources/num_mines_6.jpg");
-	sf::Texture tile_m7;
-	tile_m7.loadFromFile("resources/num_mines_7.jpg");
-	sf::Texture tile_m8;
-	tile_m8.loadFromFile("resources/num_mines_8.jpg");
 	sf::Texture tile_flag;
+	sf::Texture tile_m1;
+	sf::Texture tile_m2;
+	sf::Texture tile_m3;
+	sf::Texture tile_m4;
+	sf::Texture tile_m5;
+	sf::Texture tile_m6;
+	sf::Texture tile_m7;
+	sf::Texture tile_m8;
+
+	tile_hidden.loadFromFile("resources/tile_hidden.jpg");
 	tile_flag.loadFromFile("resources/flag.jpg");
+	tile_m1.loadFromFile("resources/num_mines_1.jpg");
+	tile_m2.loadFromFile("resources/num_mines_2.jpg");
+	tile_m3.loadFromFile("resources/num_mines_3.jpg");
+	tile_m4.loadFromFile("resources/num_mines_4.jpg");
+	tile_m5.loadFromFile("resources/num_mines_5.jpg");
+	tile_m6.loadFromFile("resources/num_mines_6.jpg");
+	tile_m7.loadFromFile("resources/num_mines_7.jpg");
+	tile_m8.loadFromFile("resources/num_mines_8.jpg");
 
 	// instantiate each tile
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
