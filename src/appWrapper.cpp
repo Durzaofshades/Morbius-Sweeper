@@ -1,9 +1,6 @@
 #include "appWrapper.hpp"
 
 void app_wrapper() {
-	// Minefield_Width;
-	// Minefield_Height;
-	
 	// instantiate minefield
 	Minefield minefield;
 
@@ -13,12 +10,9 @@ void app_wrapper() {
 	while (window.isOpen()) {
 		sf::Event event;
 
-		// check for event
-		while (window.pollEvent(event)) {
-			
-			if (event.type == sf::Event::Closed) {
-				window.close();
-			}
+		while (window.pollEvent(event)) { // check for event
+			if (event.type == sf::Event::Closed) window.close();
+			if (event.type == sf::Event::MouseButtonPressed)
 		}
 
 		// update window
