@@ -92,7 +92,7 @@ void Minefield::reveal(int x, int y) {
 	int X_index = (X_pos - X_OFFSET) / TILE_LENGTH;
 	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
 
-	Tile* current_Tile = this->field[x][y];
+	Tile* current_Tile = this->field[X_index][Y_index];
 
 	// check if tile is already revealed, if so do nothing (early return)
 	if (current_Tile->state == Revealed) return;
