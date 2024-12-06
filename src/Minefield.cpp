@@ -94,6 +94,9 @@ void Minefield::reveal(int x, int y) {
 
 	Tile* current_Tile = this->field[X_index][Y_index];
 
+	if (X_index >= Minefield_Width) return;
+	if (Y_index >= Minefield_Height) return;
+
 	// check if tile is already revealed, if so do nothing (early return)
 	if (current_Tile->state == Revealed) return;
 	if (current_Tile->reveal() == -1) this->end_game();
@@ -105,8 +108,12 @@ void Minefield::flag(int x, int y) {
 
 	int X_index = (X_pos - X_OFFSET) / TILE_LENGTH;
 	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
+	
+	if (X_index >= Minefield_Width) return;
+	if (Y_index >= Minefield_Height) return;
 
 	Tile* current_Tile = this->field[X_index][Y_index];
+
 	if (current_Tile->state == Flagged) return;
 	if (current_Tile->flag() == -1) this->end_game();
 }
