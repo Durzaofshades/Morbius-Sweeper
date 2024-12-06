@@ -86,25 +86,29 @@ Minefield::Minefield() {
 }
 
 void Minefield::reveal(int x, int y) {
+	int X_pos = x;
+	int Y_pos = y;
+
+	int X_index = (X_pos - X_OFFSET) / TILE_LENGTH;
+	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
+
 	Tile* current_Tile = this->field[x][y];
 
 	// check if tile is already revealed, if so do nothing (early return)
-	if (current_Tile->state == Revealed) {
-		return;
-	}
-
-	if (current_Tile->reveal() == -1) {
-		// -1 means end game
-		/*this->end_game();*/
-		return;
-	}
+	if (current_Tile->state == Revealed) return;
+	if (current_Tile->reveal() == -1) this->end_game();
 }
 
 void Minefield::flag(int x, int y) {
-	Tile* current_Tile = this->field[x][y];
-	if (current_Tile->flag() == -1) {
-		this->end_game();
-	}
+	int X_pos = x;
+	int Y_pos = y;
+
+	int X_index = (X_pos - X_OFFSET) / TILE_LENGTH;
+	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
+
+	Tile* current_Tile = this->field[X_index][Y_index];
+
+	if (current_Tile->flag() == -1) this->end_game();
 }
 
 void Minefield::draw(sf::RenderWindow& window) {
