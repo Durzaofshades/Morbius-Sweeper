@@ -107,7 +107,7 @@ void Minefield::flag(int x, int y) {
 	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
 
 	Tile* current_Tile = this->field[X_index][Y_index];
-
+	if (current_Tile->state == Flagged) return;
 	if (current_Tile->flag() == -1) this->end_game();
 }
 
