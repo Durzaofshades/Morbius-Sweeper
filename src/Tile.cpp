@@ -37,6 +37,7 @@ void Tile::draw(sf::RenderWindow& window) {
 	window.draw(this->m_Sprite);
 }
 
+
 float Tile::getPositionX() {
 	return graphics.getPosition().x;
 }

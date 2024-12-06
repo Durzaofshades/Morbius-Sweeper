@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <fstream>
 
+#include "Math.hpp"
+
 #include "SFML\Graphics.hpp"
 
 #define _CRT_SECURE_NO_WARNINGS
