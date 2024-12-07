@@ -1,7 +1,7 @@
 #include "Mine_Tile.hpp"
 
 int Mine_Tile::reveal(Textures& textures) {
-	return 1;
+	return -1;
 }
 
 int Mine_Tile::flag(Textures& textures) {
