@@ -12,4 +12,4 @@ int Mine_Tile::flag() {
 	return 0;
 }
 
-int Mine_Tile::is_mine() { return 1; }
+// int Mine_Tile::is_mine() { return 1; }
