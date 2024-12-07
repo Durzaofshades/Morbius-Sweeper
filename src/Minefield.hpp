@@ -16,14 +16,14 @@ private:
 
 	void lose_game();
 	void win_game();
-	void end_game();
+	void end_game(sf::RenderWindow& window);
 
 public:
 	Minefield();
 
 	int mine_count;
 
-	void reveal(int x, int y); // trigger a tile
-	void flag(int x, int y); // place a flag on a tile
+	void reveal(int x, int y, sf::RenderWindow& window); // trigger a tile
+	void flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_Text); // place a flag on a tile
 	void draw(sf::RenderWindow& window); // runs tile.draw() on every tile
 };

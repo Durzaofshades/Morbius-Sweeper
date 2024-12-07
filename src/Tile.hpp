@@ -16,7 +16,7 @@ public:
 	Tile_State state;
 
 	virtual int reveal(); // returns a -1 on loss
-	virtual int flag(); // returns -1 on loss
+	virtual int flag(sf::Texture new_Texture, int flags); // returns -1 on loss
 	virtual int is_Mine();
 
 	void draw(sf::RenderWindow& window);

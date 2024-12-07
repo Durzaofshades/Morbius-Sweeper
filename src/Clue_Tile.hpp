@@ -12,7 +12,7 @@ public:
 	}
 
 	int flag(); // this is not a mine, lose the game
-	int reveal(int x, int y, int mines); // this is a clue
+	int reveal(int x, int y, int mines, sf::Texture new_Texture); // this is a clue
 	int is_mine();
 
 private:

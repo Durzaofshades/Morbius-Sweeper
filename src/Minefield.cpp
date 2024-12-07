@@ -1,7 +1,7 @@
 #include "Minefield.hpp"
 
 void Minefield::generate_field() {
-	int x_index, y_index;
+	int x_index, y_index, flag_num = 0;
 	float x_pos, y_pos;
 
 	sf::Texture tile_hidden;
@@ -74,10 +74,10 @@ void Minefield::win_game()
 	return;
 }
 
-void Minefield::end_game()
+void Minefield::end_game(sf::RenderWindow& window)
 {
-	//if is_mine(), lose_game();
-	//else if all mines flagged, win_game();
+	std::cout << "Hey... you're kinda bad at minesweeper" << std::endl;
+	window.close();
 }
 
 Minefield::Minefield() {
@@ -85,7 +85,7 @@ Minefield::Minefield() {
 	this->mine_count = 0; // every time a mine is flagged successfuly, decrement
 }
 
-void Minefield::reveal(int x, int y) {
+void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
 	// int X_pos = x + Window_Width/2; 
 	// int Y_pos = y + Window_Height/2;
 	int X_pos = x; 
@@ -101,10 +101,12 @@ void Minefield::reveal(int x, int y) {
 
 	// check if tile is already revealed, if so do nothing (early return)
 	if (current_Tile->state == Revealed) return;
-	if (current_Tile->reveal() == -1) this->end_game();
+	if (current_Tile->reveal() == -1) this->end_game(window);
 }
 
-void Minefield::flag(int x, int y) {
+void Minefield::flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_text) {
+	
+
 	// int X_pos = x + Window_Width/2; 
 	// int Y_pos = y + Window_Height/2;
 	int X_pos = x; 
@@ -119,7 +121,7 @@ void Minefield::flag(int x, int y) {
 	Tile* current_Tile = this->field[X_index][Y_index];
 
 	if (current_Tile->state == Flagged) return;
-	if (current_Tile->flag() == -1) this->end_game();
+	if (current_Tile->flag(flag_text, flag_num) == -1) this->end_game(window);
 }
 
 void Minefield::draw(sf::RenderWindow& window) {
