@@ -95,10 +95,10 @@ void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
 	int X_index = (X_pos - X_OFFSET) / TILE_LENGTH;
 	int Y_index = (Y_pos - Y_OFFSET) / TILE_LENGTH;
 
-	Tile* current_Tile = this->field[X_index][Y_index];
-
 	if (!(0 <= X_index) && !(X_index < Minefield_Width)) return;
 	if (!(0 <= Y_index) && !(Y_index < Minefield_Height)) return;
+
+	Tile* current_Tile = this->field[X_index][Y_index];
 
 	// check if tile is already revealed, if so do nothing (early return)
 	if (current_Tile->state == Revealed) return;

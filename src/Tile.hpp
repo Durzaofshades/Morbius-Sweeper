@@ -15,7 +15,7 @@ public:
 
 	Tile_State state;
 
-	virtual int is_Mine() = 0;
+	virtual int is_Mine();
 	virtual int reveal() = 0; // returns a -1 on loss
 	virtual int flag() = 0; // returns -1 on loss
 
