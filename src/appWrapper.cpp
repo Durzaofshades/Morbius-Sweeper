@@ -15,9 +15,7 @@ void app_wrapper() {
 	sf::Texture tile_m8;
 
 	flag.loadFromFile("resources/flag.jpg");
-	if (!tile_m1.loadFromFile("resources/num_mines_1.jpg")) {
-		std::cout << "Tile 1 Cannot Load";
-	}
+	tile_m1.loadFromFile("resources/num_mines_1.jpg");
 	tile_m2.loadFromFile("resources/num_mines_2.jpg");
 	tile_m3.loadFromFile("resources/num_mines_3.jpg");
 	tile_m4.loadFromFile("resources/num_mines_4.jpg");

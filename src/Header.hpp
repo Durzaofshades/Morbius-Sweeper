@@ -7,6 +7,7 @@
 #include <fstream>
 
 #include "Math.hpp"
+#include "Textures.hpp"
 
 #include "SFML\Graphics.hpp"
 
