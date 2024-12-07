@@ -1,8 +1,11 @@
 #include "Tile.hpp"
 
-Tile::Tile(float x, float y, sf::Texture new_Texture) {
+Tile::Tile(float x, float y) {
+	
 	sf::RectangleShape tile_rectangle(sf::Vector2f(60.f, 60.f));
-	Texture = new_Texture;
+	
+	Texture.loadFromFile("resources/tile_hidden.jpg");
+	
 	this->m_Sprite.setTexture(Texture);
 	this->m_Sprite.setScale(.12, .12);
 	this->m_Sprite.setPosition(x, y);
@@ -21,13 +24,14 @@ int Tile::reveal()
 {
 	return 0;
 }
-
+/*
 int Tile::flag(sf::Texture new_Texture)
 {
 	this->m_Sprite.setTexture(new_Texture);
 	this->m_Sprite.setScale(.12, .12);
 	return 0;
 }
+*/
 
 int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "crashes out" if I do that
 {

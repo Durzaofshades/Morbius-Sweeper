@@ -10,14 +10,14 @@ public:
 	float getPositionY();
 
 
-	Tile(float x, float y, sf::Texture new_Texture);
+	Tile(float x, float y);
 	~Tile();
 
 	Tile_State state;
 
-	virtual int reveal(); // returns a -1 on loss
-	virtual int flag(sf::Texture new_Texture); // returns -1 on loss
-	virtual int is_Mine();
+	virtual int is_Mine() = 0;
+	virtual int reveal() = 0; // returns a -1 on loss
+	virtual int flag() = 0; // returns -1 on loss
 
 	void draw(sf::RenderWindow& window);
 

@@ -7,13 +7,13 @@
 class Clue_Tile : public Tile {
 
 public:
-	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y, sf::Texture new_Texture) : Tile(X, Y, new_Texture) {
+	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y) : Tile(X,Y){
 		this->calculate_clue(field, X, Y);
 	}
 
-	int flag(); // this is not a mine, lose the game
-	int reveal(int x, int y, int mines, sf::Texture new_Texture); // this is a clue
-	int is_mine();
+	int flag() override; // this is not a mine, lose the game
+	int reveal() override; // this is a clue
+	int is_mine() override;
 
 private:
 	int Mine_Number;

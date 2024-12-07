@@ -34,7 +34,7 @@ void Minefield::generate_field() {
 			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			this->field[x_index][y_index] = (Tile*)(new Tile(x_pos, y_pos, tile_hidden));
+			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(x_pos, y_pos, tile_hidden));
 		}
 	}
 
@@ -47,7 +47,7 @@ void Minefield::generate_field() {
 
 		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos, tile_hidden);
 	}
-
+	/*
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
 		for (int y_index = 0; y_index < Minefield_Height; y_index++) {
 			// loop over every tile
@@ -61,6 +61,7 @@ void Minefield::generate_field() {
 			}
 		}
 	}
+	*/
 }
 
 void Minefield::lose_game()
