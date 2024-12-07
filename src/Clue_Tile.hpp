@@ -8,8 +8,8 @@ class Clue_Tile : public Tile {
 
 public:
 	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y) : Tile(X,Y){
-		this->calculate_clue(field, X, Y);
 		this->is_mine = 0;
+		this->calculate_clue(field, X, Y);
 	}
 
 	virtual int flag(); // this is not a mine, lose the game

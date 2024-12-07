@@ -30,6 +30,7 @@ int TEST_calculate_clue() {
  
     for (int x = 0; x < 15; x++) {
         for (int y = 0; y < 15; y++) {
+            if (x != 0 && y != 0)
             field[x][y] = new Mine_Tile(0, 0);
         }
     }

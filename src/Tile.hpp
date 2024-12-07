@@ -27,9 +27,8 @@ public:
 	sf::Sprite m_Sprite;
 	sf::Texture Texture;
 
-	friend int calculate_clue(Tile* field[Minefield_Width][Minefield_Height], int X, int Y);
-
-protected:
+	// friend int Clue_Tile::calculate_clue(Tile* field[Minefield_Width][Minefield_Height], int X, int Y);
 	int	is_mine;
+
 };
 
