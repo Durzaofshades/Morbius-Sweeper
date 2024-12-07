@@ -4,6 +4,9 @@ void Minefield::generate_field() {
 	int x_index, y_index, flag_num = 0;
 	float x_pos, y_pos;
 
+<<<<<<< HEAD
+	
+=======
 	int x, y;
 
 	sf::Texture tile_hidden;
@@ -27,6 +30,7 @@ void Minefield::generate_field() {
 	tile_m6.loadFromFile("resources/num_mines_6.jpg");
 	tile_m7.loadFromFile("resources/num_mines_7.jpg");
 	tile_m8.loadFromFile("resources/num_mines_8.jpg");
+>>>>>>> d006d7d9a8ca1387f70d984e0565e1a0e880cfc1
 
 	// instantiate each tile
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
