@@ -20,7 +20,7 @@ Tile::Tile(float x, float y) {
 
 Tile::~Tile() {}
 
-int Tile::is_Mine() { return 0; }
+// int Tile::is_Mine() { return 0; }
 
 void Tile::draw(sf::RenderWindow& window) {
 	window.draw(this->graphics);
