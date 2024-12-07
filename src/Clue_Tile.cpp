@@ -5,7 +5,6 @@
 int Clue_Tile::flag() { return -1; }
 
 int Clue_Tile::reveal() {
-	// TODO GRAPHICS
 	sf::Texture tile_m1;
 	sf::Texture tile_m2;
 	sf::Texture tile_m3;
