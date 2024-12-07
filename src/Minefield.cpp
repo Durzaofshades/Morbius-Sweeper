@@ -86,6 +86,9 @@ Minefield::Minefield() {
 void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
 	// int X_pos = x + Window_Width/2; 
 	// int Y_pos = y + Window_Height/2;
+
+
+
 	int X_pos = x; 
 	int Y_pos = y;
 
