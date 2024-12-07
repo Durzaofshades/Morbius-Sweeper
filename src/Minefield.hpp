@@ -24,6 +24,6 @@ public:
 	int mine_count;
 
 	void reveal(int x, int y, sf::RenderWindow& window); // trigger a tile
-	void flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_Text); // place a flag on a tile
+	void flag(int x, int y, sf::RenderWindow& window); // place a flag on a tile
 	void draw(sf::RenderWindow& window); // runs tile.draw() on every tile
 };

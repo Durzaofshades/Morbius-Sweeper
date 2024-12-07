@@ -34,7 +34,7 @@ void Minefield::generate_field() {
 			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(x_pos, y_pos, tile_hidden));
+			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(field, x_pos, y_pos));
 		}
 	}
 
@@ -45,7 +45,7 @@ void Minefield::generate_field() {
 		x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 		y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos, tile_hidden);
+		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos);
 	}
 	/*
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
@@ -105,7 +105,7 @@ void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
 	if (current_Tile->reveal() == -1) this->end_game(window);
 }
 
-void Minefield::flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_text) {
+void Minefield::flag(int x, int y, sf::RenderWindow& window) {
 	
 
 	// int X_pos = x + Window_Width/2; 
@@ -122,7 +122,7 @@ void Minefield::flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_te
 	Tile* current_Tile = this->field[X_index][Y_index];
 
 	if (current_Tile->state == Flagged) return;
-	if (current_Tile->flag(flag_text) == -1) this->end_game(window);
+	if (current_Tile->flag() == -1) this->end_game(window);
 }
 
 void Minefield::draw(sf::RenderWindow& window) {

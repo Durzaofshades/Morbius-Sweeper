@@ -43,7 +43,7 @@ void app_wrapper() {
 				minefield.reveal(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y, window);
 			}
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {
-				minefield.flag(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y, window, flag);
+				minefield.flag(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y, window);
 			}
 		}
 

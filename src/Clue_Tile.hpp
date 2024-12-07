@@ -11,9 +11,9 @@ public:
 		this->calculate_clue(field, X, Y);
 	}
 
-	int flag() override; // this is not a mine, lose the game
-	int reveal() override; // this is a clue
-	int is_mine() override;
+	virtual int flag(); // this is not a mine, lose the game
+	virtual int reveal(); // this is a clue
+	virtual int is_mine();
 
 private:
 	int Mine_Number;

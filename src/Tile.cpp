@@ -20,29 +20,10 @@ Tile::Tile(float x, float y) {
 
 Tile::~Tile() {}
 
-int Tile::reveal()
-{
-	return 0;
-}
-/*
-int Tile::flag(sf::Texture new_Texture)
-{
-	this->m_Sprite.setTexture(new_Texture);
-	this->m_Sprite.setScale(.12, .12);
-	return 0;
-}
-*/
-
-int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "crashes out" if I do that
-{
-	return 0;
-}
-
 void Tile::draw(sf::RenderWindow& window) {
 	window.draw(this->graphics);
 	window.draw(this->m_Sprite);
 }
-
 
 float Tile::getPositionX() {
 	return graphics.getPosition().x;

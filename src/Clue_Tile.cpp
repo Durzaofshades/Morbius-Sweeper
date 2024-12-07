@@ -4,7 +4,7 @@
 
 int Clue_Tile::flag() { return -1; }
 
-int Clue_Tile::reveal(int x, int y, int mines, sf::Texture new_Texture) {
+int Clue_Tile::reveal() {
 	// TODO GRAPHICS
 	sf::Texture tile_m1;
 	sf::Texture tile_m2;
@@ -24,7 +24,7 @@ int Clue_Tile::reveal(int x, int y, int mines, sf::Texture new_Texture) {
 	tile_m7.loadFromFile("resources/num_mines_7.jpg");
 	tile_m8.loadFromFile("resources/num_mines_8.jpg");
 	
-	switch (mines) {
+	switch (this->Mine_Number) {
 	case 0: std::cout << "No mines, do not change" << std::endl;
 	case 1: 
 		this->m_Sprite.rotate(180);
