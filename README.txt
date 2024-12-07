@@ -25,5 +25,5 @@ ANYWAYS:
 Here's the link to the youtube video!
  - -
 
-
+TO USE THE TEST CASES FOR THIS PROGRAM YOU MUST CHANGE THE TESTING DEFINITION IN HEADER.HPP
 Thank you very much for the awesome semester of teaching!
