@@ -22,11 +22,10 @@ int Tile::reveal()
 	return 0;
 }
 
-int Tile::flag(sf::Texture new_Texture, int flags)
+int Tile::flag(sf::Texture new_Texture)
 {
-
-	//this->m_Sprite.setTexture(new_Texture);
-	//this->m_Sprite.setScale(.12, .12);
+	this->m_Sprite.setTexture(new_Texture);
+	this->m_Sprite.setScale(.12, .12);
 	return 0;
 }
 
@@ -36,7 +35,7 @@ int Tile::is_Mine() // WEIRDO ALERT!! this should be pure virtual but the code "
 }
 
 void Tile::draw(sf::RenderWindow& window) {
-	
+	window.draw(this->graphics);
 	window.draw(this->m_Sprite);
 }
 

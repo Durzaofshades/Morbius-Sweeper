@@ -121,7 +121,7 @@ void Minefield::flag(int x, int y, sf::RenderWindow& window, sf::Texture flag_te
 	Tile* current_Tile = this->field[X_index][Y_index];
 
 	if (current_Tile->state == Flagged) return;
-	if (current_Tile->flag(flag_text, flag_num) == -1) this->end_game(window);
+	if (current_Tile->flag(flag_text) == -1) this->end_game(window);
 }
 
 void Minefield::draw(sf::RenderWindow& window) {
