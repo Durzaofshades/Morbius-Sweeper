@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Header.hpp"
 
 class Textures {
