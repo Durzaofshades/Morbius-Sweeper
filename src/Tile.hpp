@@ -18,8 +18,8 @@ public:
 	Tile_State state;
 
 	// virtual int is_Mine();
-	virtual int reveal(Textures textures) = 0; // returns a -1 on loss
-	virtual int flag(Textures textures) = 0; // returns -1 on loss
+	virtual int reveal(Textures& textures) = 0; // returns a -1 on loss
+	virtual int flag(Textures& textures) = 0; // returns -1 on loss
 
 	void draw(sf::RenderWindow& window);
 

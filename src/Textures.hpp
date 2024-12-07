@@ -5,7 +5,7 @@
 class Textures {
 public:
 	Textures(void);
-
+	
 	sf::Texture tile_hidden; // hidden textures
 	sf::Texture tile_flag; // flag texture
 	sf::Texture tile_m1; // clue 1
