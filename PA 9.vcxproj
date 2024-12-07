@@ -25,6 +25,7 @@
     <ClInclude Include="src\Math.hpp" />
     <ClInclude Include="src\Minefield.hpp" />
     <ClInclude Include="src\Mine_Tile.hpp" />
+    <ClInclude Include="src\Test.hpp" />
     <ClInclude Include="src\Tile.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +35,7 @@
     <ClCompile Include="src\Math.cpp" />
     <ClCompile Include="src\Minefield.cpp" />
     <ClCompile Include="src\Mine_Tile.cpp" />
+    <ClCompile Include="src\Test.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>

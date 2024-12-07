@@ -25,6 +25,5 @@ public:
 	sf::Sprite m_Sprite;
 	sf::Texture Texture;
 private:
-	
 };
 
