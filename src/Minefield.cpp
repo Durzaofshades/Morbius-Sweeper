@@ -4,6 +4,8 @@ void Minefield::generate_field() {
 	int x_index, y_index, flag_num = 0;
 	float x_pos, y_pos;
 
+	int x, y;
+
 	sf::Texture tile_hidden;
 	sf::Texture tile_flag;
 	sf::Texture tile_m1;
@@ -34,7 +36,7 @@ void Minefield::generate_field() {
 			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(field, x_pos, y_pos));
+			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(x_pos, y_pos));
 		}
 	}
 
@@ -44,24 +46,19 @@ void Minefield::generate_field() {
 		
 		x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 		y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
-
-		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos);
+		
+		if (field[x_index][y_index]->is_mine != 1) {
+			this->field[x_index][y_index] = new Mine_Tile(x_pos, y_pos);
+		}
 	}
-	/*
-	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
-		for (int y_index = 0; y_index < Minefield_Height; y_index++) {
-			// loop over every tile
-			// if tile is not a mine, create a new clue tile
-			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
-			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			if (!this->field[x_index][y_index]->is_Mine()) {
-				// if the current mine index is NOT a mine:
-				this->field[x_index][y_index] = (Tile*)(new Clue_Tile(this->field, x_pos, y_pos, tile_hidden));
+	for (x = 0; x < Minefield_Width; x++) {
+		for (y = 0; y < Minefield_Width; y++) {
+			if (field[x][y]->is_mine == 0){
+				((Clue_Tile*)field[x][y])->calculate_clue(field, x, y);
 			}
 		}
 	}
-	*/
 }
 
 void Minefield::lose_game()

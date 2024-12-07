@@ -27,18 +27,26 @@ int TEST_position_to_index_Y() {
 
 int TEST_calculate_clue() {
     Tile* field[15][15];
- 
-    for (int x = 0; x < 15; x++) {
-        for (int y = 0; y < 15; y++) {
-            if (x != 0 && y != 0)
-            field[x][y] = new Mine_Tile(0, 0);
+    int x, y;
+
+    for (x = 0; x < 15; x++) {
+        for (y = 0; y < 15; y++) {
+			field[x][y] = new Clue_Tile(0, 0);
         }
     }
 
-    field[0][0] = new Clue_Tile(field, 0, 0);
-    
-    Clue_Tile* tile = (Clue_Tile*) field[0][0];
-    
-    if (tile->Mine_Number == 3) return 0;
+    field[0][0] = new Mine_Tile(0, 0);
+    field[0][1] = new Mine_Tile(0, 0);
+
+
+    for (int x = 0; x < 15; x++) {
+        for (int y = 0; y < 15; y++) {
+            if (field[x][y]->is_mine != 1) {
+                ((Clue_Tile*) field[x][y])->calculate_clue(field, 0, 0);
+            }
+        }
+    }
+
+    if (((Clue_Tile*)field[1][1])->Mine_Number == 2) return 0;
     else return 1;
 }
