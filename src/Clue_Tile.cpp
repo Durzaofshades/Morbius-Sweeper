@@ -2,9 +2,9 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-int Clue_Tile::flag(Textures textures) { return -1; }
+int Clue_Tile::flag(Textures& textures) { return -1; }
 
-int Clue_Tile::reveal(Textures textures) {
+int Clue_Tile::reveal(Textures& textures) {
 	
 	switch (this->Mine_Number) {
 	case 0: 

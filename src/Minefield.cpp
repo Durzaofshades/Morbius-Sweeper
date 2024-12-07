@@ -61,12 +61,7 @@ Minefield::Minefield() {
 	this->mine_count = 0; // every time a mine is flagged successfuly, decrement
 }
 
-void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
-	// int X_pos = x + Window_Width/2; 
-	// int Y_pos = y + Window_Height/2;
-
-
-
+void Minefield::reveal(int x, int y, sf::RenderWindow& window, Textures& texture) {
 	int X_pos = x; 
 	int Y_pos = y;
 
@@ -80,14 +75,10 @@ void Minefield::reveal(int x, int y, sf::RenderWindow& window) {
 
 	// check if tile is already revealed, if so do nothing (early return)
 	if (current_Tile->state == Revealed) return;
-	if (current_Tile->reveal() == -1) this->end_game(window);
+	if (current_Tile->reveal(texture) == -1) this->end_game(window);
 }
 
-void Minefield::flag(int x, int y, sf::RenderWindow& window) {
-	
-
-	// int X_pos = x + Window_Width/2; 
-	// int Y_pos = y + Window_Height/2;
+void Minefield::flag(int x, int y, sf::RenderWindow& window, Textures& texture) {
 	int X_pos = x; 
 	int Y_pos = y;
 
@@ -100,7 +91,7 @@ void Minefield::flag(int x, int y, sf::RenderWindow& window) {
 	Tile* current_Tile = this->field[X_index][Y_index];
 
 	if (current_Tile->state == Flagged) return;
-	if (current_Tile->flag() == -1) this->end_game(window);
+	if (current_Tile->flag(texture) == -1) this->end_game(window);
 }
 
 void Minefield::draw(sf::RenderWindow& window) {

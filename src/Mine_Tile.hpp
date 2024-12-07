@@ -9,6 +9,6 @@ public:
 	}
 
 	// virtual int is_mine();
-	virtual int reveal(Textures textures); // this is a mine, lose the game
-	virtual int flag(Textures textures);
+	virtual int reveal(Textures& textures); // this is a mine, lose the game
+	virtual int flag(Textures& textures);
 };

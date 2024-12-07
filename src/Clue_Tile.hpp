@@ -12,8 +12,8 @@ public:
 		this->Mine_Number = 0;
 	}
 
-	virtual int flag(Textures textuers); // this is not a mine, lose the game
-	virtual int reveal(Textures textures); // this is a clue
+	virtual int flag(Textures& textures); // this is not a mine, lose the game
+	virtual int reveal(Textures& textures); // this is a clue
 	// virtual int is_mine();
 	
 	friend int TEST_calculate_clue();
