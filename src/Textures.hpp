@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Header.hpp"
+#include "SFML/Graphics.hpp"
 
 class Textures {
 public:
