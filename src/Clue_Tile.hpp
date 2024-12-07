@@ -14,6 +14,9 @@ public:
 	virtual int flag(); // this is not a mine, lose the game
 	virtual int reveal(); // this is a clue
 	virtual int is_mine();
+	
+	friend int TEST_calculate_clue();
+
 
 private:
 	int Mine_Number;
