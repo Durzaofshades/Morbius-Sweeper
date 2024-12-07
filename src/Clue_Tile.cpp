@@ -2,7 +2,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-int Clue_Tile::flag() { return -1; }
+int Clue_Tile::flag(Textures textures) { return -1; }
 
 int Clue_Tile::reveal(Textures textures) {
 	

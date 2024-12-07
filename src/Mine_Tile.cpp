@@ -1,14 +1,11 @@
 #include "Mine_Tile.hpp"
 
-int Mine_Tile::reveal() {
+int Mine_Tile::reveal(Textures textures) {
 	return 1;
 }
 
-int Mine_Tile::flag() {
-	sf::Texture tile_flag;
-	tile_flag.loadFromFile("resources/flag.jpg");
-	
-	this->m_Sprite.setTexture(tile_flag);
+int Mine_Tile::flag(Textures textures) {
+	this->m_Sprite.setTexture(textures.tile_flag);
 	return 0;
 }
 
