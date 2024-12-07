@@ -30,15 +30,15 @@ int TEST_calculate_clue() {
  
     for (int x = 0; x < 15; x++) {
         for (int y = 0; y < 15; y++) {
-            if (x != 0 && y != 0)
             field[x][y] = new Mine_Tile(0, 0);
         }
     }
+    
 
-    field[0][0] = new Clue_Tile(field, 0, 0);
-    
-    Clue_Tile* tile = (Clue_Tile*) field[0][0];
-    
-    if (tile->Mine_Number == 3) return 0;
+    Clue_Tile* newTile = new Clue_Tile(field, 0, 0);
+    field[0][0] = (Tile*)newTile;
+    newTile->calculate_clue(field, 0, 0);
+
+    if (newTile->Mine_Number == 3) return 0;
     else return 1;
 }
