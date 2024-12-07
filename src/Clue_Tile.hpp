@@ -7,7 +7,7 @@
 class Clue_Tile : public Tile {
 
 public:
-	Clue_Tile(Tile* field[Minefield_Width][Minefield_Height], float X, float Y) : Tile(X,Y){
+	Clue_Tile(float X, float Y) : Tile(X,Y){
 		this->is_mine = 0;
 		this->Mine_Number = 0;
 	}

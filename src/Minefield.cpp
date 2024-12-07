@@ -4,6 +4,8 @@ void Minefield::generate_field() {
 	int x_index, y_index, flag_num = 0;
 	float x_pos, y_pos;
 
+	int x, y;
+
 	sf::Texture tile_hidden;
 	sf::Texture tile_flag;
 	sf::Texture tile_m1;
@@ -34,7 +36,7 @@ void Minefield::generate_field() {
 			x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 			y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
 
-			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(field, x_pos, y_pos));
+			this->field[x_index][y_index] = (Tile*)(new Clue_Tile(x_pos, y_pos));
 		}
 	}
 
@@ -44,8 +46,10 @@ void Minefield::generate_field() {
 		
 		x_pos = X_OFFSET + (x_index * TILE_LENGTH);
 		y_pos = Y_OFFSET + (y_index * TILE_LENGTH);
-
-		this->field[x_index][y_index] = (Tile*) new Mine_Tile(x_pos, y_pos);
+		
+		if (field[x_index][y_index]->is_mine != 1) {
+			this->field[x_index][y_index] = new Mine_Tile(x_pos, y_pos);
+		}
 	}
 	/*
 	for (int x_index = 0; x_index < Minefield_Width; x_index++) {
