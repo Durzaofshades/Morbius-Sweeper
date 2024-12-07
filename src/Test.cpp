@@ -28,17 +28,19 @@ int TEST_position_to_index_Y() {
 int TEST_calculate_clue() {
     Tile* field[15][15];
  
+    Clue_Tile* newTile = new Clue_Tile(field, 0, 0);
+
+    field[0][0] = (Tile*)newTile;
+    field[0][1] = (Tile*) new Clue_Tile(field, 0, 1);
+
     for (int x = 0; x < 15; x++) {
         for (int y = 0; y < 15; y++) {
-            field[x][y] = new Mine_Tile(0, 0);
+            if (x != 0 && y != 0) field[x][y] = (Tile*) new Mine_Tile(0, 0);
         }
     }
     
-
-    Clue_Tile* newTile = new Clue_Tile(field, 0, 0);
-    field[0][0] = (Tile*)newTile;
     newTile->calculate_clue(field, 0, 0);
 
-    if (newTile->Mine_Number == 3) return 0;
+    if (newTile->Mine_Number == 2) return 0;
     else return 1;
 }
