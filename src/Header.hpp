@@ -11,7 +11,7 @@
 #include "SFML\Graphics.hpp"
 
 #define _CRT_SECURE_NO_WARNINGS
-#define TESTING true
+#define TESTING false
 
 	// Constants
 // there are 225 tiles in total
